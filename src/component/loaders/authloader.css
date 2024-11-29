@@ -1,0 +1,121 @@
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px; /* Padding to ensure space around the container */
+    position: relative; /* Needed for positioning the balls */
+}
+
+.auth-container {
+    position: relative; /* Establishes the rotation center */
+    width: 150px; /* Define a fixed width and height for the circle */
+    height: 150px;
+}
+
+.auth-ball {
+    position: absolute; /* Position balls absolutely for circular rotation */
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    background-color: #37bf57;
+    transform-origin: -60px; /* Change this value to control the radius of rotation */
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.auth-ball:nth-child(2) {
+    animation-delay: -1s;
+    background-color: #49caa1;
+}
+
+.auth-ball:nth-child(3) {
+    animation-delay: -2s;
+    background-color: #12aab4;
+}
+
+.auth-ball:nth-child(4) {
+    animation-delay: -3s;
+    background-color: #2c88c1;
+}
+
+.auth-ball:nth-child(5) {
+    animation-delay: -4s;
+    background-color: #6b45b1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#auth-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets and small devices */
+@media (max-width: 768px) {
+    .auth-container {
+        width: 120px; /* Adjust the size for smaller screens */
+        height: 120px;
+    }
+
+    .auth-ball {
+        width: 15px;
+        height: 15px;
+        transform-origin: -50px; /* Adjust radius for smaller screens */
+    }
+
+    #auth-message {
+        font-size: 16px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .auth-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .auth-ball {
+        width: 12px;
+        height: 12px;
+        transform-origin: -40px;
+    }
+
+    #auth-message {
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 320px) {
+    .auth-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .auth-ball {
+        width: 10px;
+        height: 10px;
+        transform-origin: -30px;
+    }
+
+    #auth-message {
+        font-size: 12px;
+    }
+}

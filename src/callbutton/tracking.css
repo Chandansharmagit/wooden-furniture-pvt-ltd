@@ -1,0 +1,103 @@
+/* CallButton.css */
+.call-button-order {
+    position: fixed;
+    bottom: 20px;
+    right: 170px;
+    background: #0171b6;
+    color: black;
+    border-radius: 50%;
+   
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* Center text inside the button */
+    overflow: hidden; /* Hide overflow to manage the pop-out effect */
+}
+
+.call-icon-cart {
+    margin-left: 0.5vw;
+}
+
+#van {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem; /* Responsive font size */
+    text-align: center;
+}
+
+.t_order {
+    color: #000;
+    font-size: 1rem; /* Responsive font size */
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center text */
+    position: absolute;
+    bottom: 70px; /* Position above the button */
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    background: white;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.call-button-order:hover .t_order {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1.1); /* Slightly pop-out effect */
+}
+
+#phone {
+    color: rgb(0, 0, 0);
+}
+
+.call-button-order:hover {
+    background-color: #e6ece8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .call-button-order {
+        width: 60px;
+        height: 60px;
+        bottom: 10px;
+        right: 140px;
+    }
+
+    #van {
+        font-size: 1.2rem;
+    }
+
+    .t_order {
+        font-size: 0.9rem;
+        right: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .call-button-order {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 170px;
+    }
+
+    #van {
+        font-size: 1rem;
+    }
+
+    .t_order {
+        font-size: 0.8rem;
+        width: 10px;
+    }
+}

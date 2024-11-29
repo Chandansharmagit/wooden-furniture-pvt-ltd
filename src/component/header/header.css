@@ -1,0 +1,215 @@
+.header-container-unique {
+    background: white;
+    width: 100%;
+    z-index: 100;
+    height: auto;
+    display: flex;
+    position: relative;
+    /* Ensure the suggestions are positioned relative to this container */
+}
+
+.logo-image-unique {
+    background: white;
+    width: 12vw;
+    height: auto;
+    cursor: pointer;
+    margin-top: 0.6vw;
+}
+
+.profile-image-unique {
+    width: 3vw;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.header-item-first-unique {
+    background: white;
+    height: 12vh;
+}
+
+.smart-logo-unique {
+    margin-top: auto;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    color: #000000;
+}
+
+.fur {
+    font-style: italic;
+}
+
+.bi {
+    color: #0171b6;
+}
+
+.icon-container-unique {
+    display: flex;
+    margin-right: 5vw;
+    margin-top: 3rem;
+}
+
+.icon-item-unique {
+    margin-top: -2.5rem;
+    margin-left: 1rem;
+}
+
+.input-container-unique {
+    display: flex;
+    position: relative;
+    /* Ensure suggestions list is positioned correctly */
+}
+
+.search-button-unique {
+    height: 6vh;
+    border: none;
+    border-bottom: 1px solid black;
+    color: rgb(0, 0, 0);
+    background: white;
+    cursor: pointer;
+    width: 8vw;
+}
+
+.search-input-unique {
+    width: 35vw;
+    border: none; /* No border by default */
+    border-bottom: 1px solid black; /* Bottom border for visibility */
+    text-align: center;
+    height: 6vh;
+    outline: none; /* Remove the default outline on focus */
+}
+
+/* Remove bottom border on hover */
+.search-input-unique:hover,
+.search-input-unique:focus {
+    border-top: none; /* No border on hover or focus */
+    border-left: none;
+    border-right: none;
+    outline: none; /* Remove outline */
+}
+
+
+
+.header-item-third-unique {
+    margin-left: auto;
+    cursor: pointer;
+
+}
+
+.header-item-second-unique {
+    margin: auto;
+    width: 40vw;
+    margin-top: 1rem;
+}
+
+.header-item-first-unique {
+    margin-right: auto;
+
+
+
+
+}
+
+/* Styles for the suggestions dropdown */
+.suggestion-list-unique {
+    position: absolute;
+    top: 100%;
+    right: -10vw;
+    /* Position 100px from the right edge */
+    width: 60vw;
+    text-decoration: none;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    margin-top: 8px;
+    display: block;
+    /* Ensure the list is displayed */
+}
+
+.suggestion-item-unique {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+    text-decoration: none;
+}
+
+.suggestion-item-unique:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hide suggestions if none */
+.suggestion-list-unique.empty {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .header-container-unique {
+        flex-direction: column;
+        height: auto;
+        margin-left: -28vw;
+        position: relative;
+        /* Ensure the suggestions are positioned relative to this container */
+    }
+
+    .logo-image-unique {
+        display: none;
+    }
+
+    .icon-container-unique {
+        margin-top: -4rem;
+        margin-left: -23rem;
+        display: none;
+    }
+
+    .header-item-third-unique {
+        height: 0vh;
+        display: none;
+    }
+
+    .header-item-second-unique {
+        height: 1vh;
+    }
+
+    .icon-item-unique {
+        margin-left: -3vw;
+    }
+
+    .input-container-unique {
+        margin-top: -4rem;
+        background: white;
+        width: 100%;
+        /* Ensure input container takes full width */
+
+    }
+
+    .search-button-unique {
+        width: 20vw;
+    }
+
+    .search-input-unique {
+        width: 75vw;
+        
+        /* Adjust margin for better alignment */
+    }
+
+    /* Responsive suggestions list */
+    .suggestion-list-unique {
+        position: absolute;
+        top: calc(100% + 10px);
+        /* Position below input field with spacing */
+        left:0;
+        /* Align to the right of the input */
+        width: 95vw;
+        /* Adjust width to match the input */
+        max-height: 95vh;
+        /* Adjust max height for mobile view */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}

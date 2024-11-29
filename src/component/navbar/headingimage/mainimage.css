@@ -1,0 +1,175 @@
+.custom-slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    margin: 10px;
+
+}
+
+.custom-left-images {
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.custom-video {
+    width: 30vw;
+    height: 75vh;
+}
+
+.custom-video {
+    border: 1px solid #ccc;
+   
+}
+
+.custom-static-image {
+    width: 30vw;
+    height: 75vh;
+  
+    object-fit: cover;
+}
+
+/* Swiper slider section */
+.custom-right-slider {
+    width: 67vw;
+
+    height: 70vh;
+    margin-top: 0rem;
+
+}
+
+.custom-slide-image {
+    width: 80vw;
+   
+    height: 76.6vh;
+
+}
+
+/* Make sure the custom slider container is positioned relative */
+.custom-right-slider-unique {
+    position: relative;
+}
+
+/* Styling for the unique navigation buttons */
+.swiper-button-next-unique,
+.swiper-button-prev-unique {
+    background-color: white;
+    /* Set background to white */
+    color: black;
+    /* Set arrow color */
+    width: 60px;
+    /* Button width */
+    height: 60px;
+    /* Button height */
+    position: absolute;
+    /* Set position to absolute */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Center the buttons vertically */
+    z-index: 10;
+    /* Ensure buttons appear on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+}
+
+/* Position the next button to the far right */
+.swiper-button-next-unique {
+    right: 0;
+    /* Stick to the right edge */
+}
+
+/* Position the prev button to the far left */
+.swiper-button-prev-unique {
+    left: 0;
+    /* Stick to the left edge */
+}
+
+/* Optional: Hover effects for unique buttons */
+.swiper-button-next-unique:hover,
+.swiper-button-prev-unique:hover {
+    background-color: #f1f1f1;
+    /* Slightly darker background on hover */
+    color: #007bff;
+    /* Change arrow color on hover */
+}
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .custom-slider-container {
+        flex-direction: column;
+    }
+
+    .custom-left-images {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .custom-static-image {
+        width: 150px;
+        height: 250px;
+    }
+
+    .custom-right-slider {
+        width: 250px;
+    }
+
+    .custom-slide-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-left-images {
+        gap: 5px;
+    }
+
+    .custom-static-image {
+        width: 100px;
+        height: 200px;
+    }
+
+    .custom-right-slider {
+        width: 200px;
+    }
+
+    .custom-slide-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-slider-container {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .custom-left-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-static-image {
+        width: 150px;
+        height: 180px;
+    }
+
+    .custom-right-slider {
+        width: 180px;
+    }
+
+    .custom-slide-image {
+        height: 180px;
+    }
+}

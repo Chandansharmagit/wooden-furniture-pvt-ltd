@@ -1,0 +1,61 @@
+/* doubleimage.css */
+
+.recomended {
+    text-align: center;
+    margin-top: 5rem;
+   
+  }
+  
+  .recomended span {
+    font-style: italic;
+  }
+  
+  .texts {
+    text-align: center;
+  }
+  
+  .image-container {
+    width: 96.3vw;
+    margin: 20px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .items {
+    height: 95vh;
+    quotes: 90vw;
+  }
+  .newitems{
+    width: auto;
+  }
+  .imgs-data{
+    width:48vw;
+    border-radius: 0px;
+    height: 100%;
+  }
+  
+ 
+  
+  /* Responsive styles */
+  @media (max-width: 767px) {
+    .image-container {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    .items {
+      height: auto;
+      quotes: 90vw;
+    }
+  
+    .imgs-data {
+      width: 90vw;
+      height: auto;
+    }
+    .recomended{
+      width: 90vw;
+      font-size: 20px;
+    }
+  }
+  

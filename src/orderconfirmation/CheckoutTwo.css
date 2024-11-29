@@ -1,0 +1,372 @@
+/* Container */
+.container-pregination {
+    width: 94vw;
+    height: auto;
+   margin-left: 40px;
+   margin-right: 40px;
+   margin-bottom: 40px;
+    padding: 1rem;
+    opacity: 0;
+  
+    transform: translateY(20px);
+    
+    animation: fadeInSlideUp 1s forwards;
+  }
+  @keyframes fadeInSlideUp {
+    to {
+      opacity: 1;
+     
+      transform: translateY(0);
+      
+    }
+  }
+ 
+  .cart-order{
+    background-color: #eef3f9;
+  }
+  
+  .checkout-wrapper {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Grid Layout */
+  .checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .checkout-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    background: rgb(255, 255, 255);
+    padding: 1.5rem;
+    height: auto;
+    border-radius: 8px;
+
+
+
+  }
+  
+  .contact-info-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .contact-info-content {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  
+  /* Form */
+  .form-wrapper {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .form-heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background: rgb(255, 255, 255);
+    color: #111827;
+  }
+  
+  .form-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .full-span {
+    grid-column: span 2 / span 2;
+  }
+  
+  .divider {
+    margin: 1.5rem 0;
+   
+  }
+  
+  /* Billing Info */
+  .billing-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-checkbox {
+    height: 1rem;
+    width: 1rem;
+    color: #3b82f6;
+    border-radius: 0.25rem;
+  }
+  
+  .billing-label {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+  }
+  
+  .form-footer {
+    margin-top: 1.5rem;
+  }
+  
+  .submit-button {
+    width: 15vw;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: #0171b6;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* Product List */
+  .product-list {
+    background: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .product-list-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .product-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image img {
+    width: 10rem;
+    height: auto;
+    margin: 10px;
+    border-radius: 0.375rem;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    margin-left: 1rem;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  .product-color {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .product-quantity {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .product-price-remove {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+    margin-right: 1rem;
+  }
+  
+  .remove-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #6b7280;
+  }
+  
+  .remove-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Coupon Form */
+  .coupon-form {
+    margin-top: 1.5rem;
+  }
+  
+  .coupon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .coupon-input-wrapper {
+    flex: 1;
+  }
+  
+  .coupon-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  .apply-coupon-button-wrapper {
+    margin-left: 0.5rem;
+  }
+  
+  .apply-coupon-button {
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: #0171b6;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  /* Summary List */
+  .summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .summary-item.total {
+    font-weight: 700;
+  }
+  
+  .summary-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .summary-value {
+    font-size: 1rem;
+    color: #111827;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .contact-info,
+    .product-list {
+      
+      padding: 1rem;
+    }
+    .container-pregination{
+      width: 98vw;
+      margin: 0px;
+    }
+    .submit-button{
+      width: 37vw;
+    }
+  
+    
+  .product-price-remove {
+    display: flex;
+    align-items: center;
+    margin-left: 3vw;
+  }
+    .form-wrapper,
+    .form-grid,
+    .summary-list,
+    .coupon-wrapper {
+      gap: 0.5rem;
+    }
+    
+  
+    .form-heading,
+    .summary-label,
+    .summary-value {
+      font-size: 1rem;
+    }
+    .product-details {
+      margin-left: 18vw;
+    }
+  
+    .form-input,
+    .coupon-input,
+    .submit-button,
+    .apply-coupon-button {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+    }
+  
+    .product-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .product-info {
+      margin-bottom: 0.75rem;
+    }
+  
+    .product-image img {
+      width: 35vw;
+      height: auto;
+     
+    }
+  
+    .product-name {
+      font-size: 0.875rem;
+    }
+  
+    .product-color,
+    .product-quantity,
+    .product-price {
+      font-size: 0.75rem;
+    }
+  
+    .remove-icon {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+  

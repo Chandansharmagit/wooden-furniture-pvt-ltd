@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container Styles */
+  .adminChatContainer {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: row;
+  }
+  
+  /* Sidebar Styles */
+  .adminSidebar {
+    width: 350px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+
+    flex-direction: column;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .adminSidebarHeader {
+    font-size: 1.25em;
+    margin-bottom: 15px;
+  }
+  
+  .adminSidebarUserList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .adminSidebarUser {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+    background-color: #ffffff; /* Ensure contrast */
+  }
+  
+  .adminSidebarUser.active,
+  .adminSidebarUser:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Main Chat Area Styles */
+  .adminChatMain {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #ffffff;
+    position: relative;
+  }
+  
+  .adminChatHeader {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+  }
+  
+  .adminChatMessageBox {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+  }
+  
+  .adminChatMessage {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 75%;
+    word-wrap: break-word;
+  }
+  
+  .adminChatMessage.received {
+    background-color: #e9ecef;
+    align-self: flex-start;
+  }
+  
+  .adminChatMessage.sent {
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+  }
+  
+  /* Form Styles */
+  .adminChatMessageForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .adminChatMessageInput {
+    resize: none;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .adminChatSendBtn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  
+  .adminChatSendBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .adminChatContainer {
+      flex-direction: column;
+    }
+  
+    .adminSidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #dee2e6;
+      box-shadow: none;
+    }
+  
+    .adminChatMain {
+      flex: 1;
+      margin-top: 0;
+    }
+  
+    .adminChatHeader {
+      font-size: 1.25em;
+    }
+  
+    .adminChatMessageInput {
+      height: 50px;
+    }
+  
+    .adminChatMessageBox {
+      margin-bottom: 0;
+    }
+  
+    .adminChatSendBtn {
+      font-size: 0.875em;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .adminChatContainer {
+      flex-direction: column;
+    }
+  
+    .adminSidebar {
+      padding: 10px;
+    }
+  
+    .adminSidebarHeader {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+  
+    .adminSidebarUser {
+      padding: 8px;
+      font-size: 0.875em;
+    }
+  
+    .adminChatHeader {
+      font-size: 1.125em;
+    }
+  
+    .adminChatMessageInput {
+      height: 45px;
+    }
+  
+    .adminChatSendBtn {
+      font-size: 0.75em;
+      padding: 6px 12px;
+    }
+  }
+  

@@ -1,0 +1,35 @@
+.grid-container-pregination{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  margin: 10px;
+}
+
+.grid-item {
+
+  width: 25vw;
+  height: 32vh; /* adjust the height to your desired value */
+
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+     grid-template-columns: 1fr;
+     grid-gap: 5px;
+   }
+  .grid-item {
+     height: 200px; /* adjust the height to your desired value */
+   }
+ }
+ 
+ @media (max-width: 400px) {
+  .grid-container {
+     grid-template-columns: 1fr;
+     grid-gap: 2px;
+   }
+  .grid-item {
+     height: 150px; /* adjust the height to your desired value */
+   }
+ }
+

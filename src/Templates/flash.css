@@ -1,0 +1,32 @@
+#flash-sale-img-1 {
+    border-radius: 0px;
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.flash-sale-grid-unique {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    margin: 20px;
+    gap: 10px;
+   
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (up to 900px) */
+@media (max-width: 900px) {
+    .flash-sale-grid-unique {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    .flash-sale-grid-unique {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+

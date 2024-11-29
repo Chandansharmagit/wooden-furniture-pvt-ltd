@@ -1,0 +1,187 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Unique Class Names */
+
+/* View All Button */
+.customer-feedback-widget-view-all-button {
+  background: blue;
+  color: white;
+  margin-top: 2vw;
+  width: 10vw;
+  height: 3vw;
+  border: none;
+  cursor: pointer;
+}
+
+/* Slider Container */
+.customer-feedback-widget-slider-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+}
+
+
+.customer-feedback-widget-slide-container {
+  width: 90vw;
+
+  padding: 40px 0;
+}
+
+
+/* Swiper Content */
+.customer-feedback-widget-slide-content {
+  margin: 0 40px;
+  border-radius: 0px;
+}
+
+/* Card Styles */
+.customer-feedback-widget-card {
+  border-radius: 0px;
+  background-color: #FFF;
+  height: 200px;
+  z-index: 100;
+}
+
+.customer-feedback-widget-image-content,
+.customer-feedback-widget-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.customer-feedback-widget-image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.customer-feedback-widget-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+.customer-feedback-widget-overlay::before,
+.customer-feedback-widget-overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #0171b6;
+}
+
+.customer-feedback-widget-overlay::after {
+  border-radius: 0;
+  background-color: #FFF;
+}
+
+/* Card Image */
+.customer-feedback-widget-card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+
+.customer-feedback-widget-card-image .customer-feedback-widget-card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0171b6;
+}
+
+/* Text Styles */
+.customer-feedback-widget-customer-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.customer-feedback-widget-feedback-description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+
+/* View More Button */
+.customer-feedback-widget-view-more-button {
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #0171b6;
+  border-radius: 0px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.customer-feedback-widget-view-more-button:hover {
+  background: #0171b6;
+}
+
+/* Swiper Navigation Buttons */
+.customer-feedback-widget-swiper-navBtn {
+  color: #0171b6;
+  transition: color 0.3s ease;
+}
+
+.customer-feedback-widget-swiper-navBtn:hover {
+  color: #0171b6;
+}
+
+.customer-feedback-widget-swiper-navBtn::before,
+.customer-feedback-widget-swiper-navBtn::after {
+  font-size: 38px;
+}
+
+/* Swiper Button Positions */
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background-color: #0171b6;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0171b6;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .customer-feedback-widget-slide-content {
+    margin: 0 10px;
+  }
+  .customer-feedback-widget-swiper-navBtn {
+    display: none;
+  }
+  .customer-feedback-widget-view-all-button {
+    background: blue;
+    color: white;
+    margin-top: 2vw;
+    width: 40vw;
+    height: 8vw;
+    border: none;
+    cursor: pointer;
+  }
+}

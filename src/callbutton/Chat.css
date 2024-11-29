@@ -1,0 +1,267 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Admin Chat container */
+.admin-chat-container {
+  position: relative;
+  background: #000;
+}
+
+.admin-chat-btn {
+  position: fixed;
+  width: 45px;
+  height: 25vh;
+  background: #0171b6;
+  top: 35%;
+  color: white;
+  right: 0;
+
+ 
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  transition: width 0.2s ease-out;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-50px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.admin-chat-btn:hover {
+  width: 50px;
+}
+
+.admin-chat-txt {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: -55px;
+  top: 40%;
+  color: #ffffff;
+  transition: right 0.2s ease-out;
+}
+
+.admin-chat-btn:hover .admin-chat-txt {
+  right: -53px;
+}
+
+.admin-message-box {
+  position: fixed;
+  top: 15%;
+  right: 55px;
+  width: 70vw;
+  height: 70vh;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s forwards;
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-message-box.show {
+  display: block;
+}
+
+.admin-message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0171b6;
+}
+
+.admin-message-header h2 {
+  margin: 0;
+}
+
+.admin-close-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-close-btn:hover {
+  background: #ff1a1a;
+}
+
+.admin-message-content {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.admin-message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.admin-message.received {
+  background: #f8d7da;
+  align-self: flex-start;
+}
+
+.admin-send-btn:hover {
+  background: #015f8c;
+}
+
+.imageside {
+  display: flex;
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#images_id {
+  width: 40vw;
+}
+
+.images_id {
+  width: 35vw;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: auto;
+}
+
+.feed {
+  border-radius: 12px;
+  width: 14.2vw;
+  height: 6vh;
+  margin-left: 1.5rem;
+  padding: 8px;
+  margin-top: 1rem;
+  border-width: 1px;
+  border-color: blue;
+  animation: fadeInSlideUp 1s ease-in-out;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#feedback {
+  background: #ffffff;
+  animation: slideInLeft 1s ease-out;
+}
+
+.textarea {
+  border-radius: 12px;
+  width: 30vw;
+  padding: 8px;
+  height: 20vh;
+  margin: 4px;
+  margin-left: 1.5rem;
+  border-width: 1px;
+  border-color: blue;
+  animation: fadeInSlideUp 1s ease-in-out;
+}
+
+.submit-btn {
+  width: 30vw;
+  height: 6vh;
+  margin-left: 1.5rem;
+  border-radius: 12px;
+  border-color: blue;
+  cursor: pointer;
+  animation: fadeInSlideUp 1s ease-in-out;
+}
+
+
+@media (max-width:767px){
+  .imageside {
+    flex-direction: column;
+    
+  }
+  .admin-chat-container{
+    display: none;
+  }
+  #feedback{
+    margin-right: 1rem;
+  }
+  .images_id{
+    display: none;
+  }
+  .feed {
+    border-radius: 12px;
+    width: 10.2vw;
+    height: 6vh;
+  
+    padding: 8px;
+   
+    border-width: 1px;
+    border-color: blue;
+    animation: fadeInSlideUp 1s ease-in-out;
+  }
+  .admin-message-box{
+    height: auto;
+    width: 80vw;
+    margin-left: 3rem;
+  }
+  .textarea{
+    width: 60vw;
+  }
+  .new-p-text{
+    display: none;
+  }
+ 
+}

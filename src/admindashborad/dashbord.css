@@ -1,0 +1,124 @@
+.user-dashboard {
+    display: grid;
+    margin: 20px;
+    margin-left: 7vw;
+    background: #f6f4f4;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* h3, h4 {
+    text-align: center;
+} */
+ .texts{
+    text-align: center;
+ }
+
+.user-analysis {
+    background: rgb(255, 255, 255);
+    margin: 10px;
+    width: 18vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    height: 15vh;
+    transition: 0.4s ease-in-out;
+}
+.user-analysis:hover{
+    
+}
+
+#chart {
+    width: 55vw;
+    height: auto;
+}
+
+#doughnutChart {
+    width: 30vw;
+    height: auto;
+}
+#lineChart{
+    width: 55vw;
+    height: auto;
+}
+#pending_status{
+    width: 87vw;
+    height: auto;
+}
+#profile{
+    width: 87vw;
+    height: auto;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .user-dashboard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .user-analysis {
+        width: 22vw;
+    }
+
+    #chart {
+        width: 60vw;
+        height: 50vh;
+    }
+
+    #doughnutChart {
+        width: 40vw;
+        height: 50vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .user-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-analysis {
+        width: 40vw;
+        height: 20vh;
+    }
+
+    #chart {
+        width: 80vw;
+        height: 45vh;
+    }
+
+    #doughnutChart {
+        width: 80vw;
+        height: 45vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .user-analysis {
+        width: 80vw;
+        height: 20vh;
+    }
+
+    #chart, #doughnutChart {
+        width: 90vw;
+        height: 45vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-analysis {
+        width: 90vw;
+        height: 25vh;
+    }
+
+    #chart, #doughnutChart {
+        width: 100vw;
+        height: 50vh;
+    }
+}

@@ -1,0 +1,39 @@
+/* CallButton.css */
+.call-button-profile {
+    position: fixed;
+    right: 240px;
+    bottom: 20px;
+    background-color: #ffffff; /* Green color */
+    color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #phone-profile{
+    color: rgb(0, 0, 0);
+    margin-left: 4vw;
+    margin-bottom: 5px;
+    color: blue;
+  }
+  .image--cover--profile{
+    width: 3.5vw;
+    height: 55px;
+    margin-bottom: 4px;
+    border-radius: 50%;
+   margin-left: 4vw;
+    margin-top: -0rem;
+    object-fit: cover;
+    object-position: center right;
+  }
+  
+  .call-button-profile:hover {
+    background-color: #f4f7f5; /* Darker green */
+  }
+  

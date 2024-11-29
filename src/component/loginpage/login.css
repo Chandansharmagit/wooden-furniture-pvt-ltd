@@ -1,0 +1,255 @@
+/*Start Global Style*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main-login{
+    background-color: #eef3f9;
+}
+
+.login-container {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    transform: translateY(20px);
+
+    animation: fadeInSlideUp 1s forwards;
+    height: 120vh;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.login-inner-container{
+    margin-top: -5rem;
+}
+
+
+
+
+
+
+.login-button {
+    background-color: #000; /* Black color for the disabled state */
+    background: rgb(250, 248, 248);
+    border: none;
+    padding: 10px 10px;
+    cursor: not-allowed;
+    opacity: 0.6; /* Visual indication for disabled state */
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  
+  .login-button.enabled {
+    background-color: #007bff; /* Original button color when enabled */
+    opacity: 1; /* Fully opaque when enabled */
+    cursor:crosshair;
+  }
+
+  
+
+.login-box,
+.register-box {
+    width: 50%;
+}
+
+/*Start Login Style*/
+.login-box {
+    float: right;
+    background: rgb(250, 248, 248);
+   border-radius: 8px;
+    height: 100vh;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.login-box h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+.forgot-password{
+    margin-right: 7.5vw;
+}
+
+.login-email,
+.login-password {
+    width: 20vw;
+  
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #eeeeef;
+}
+.login-email,.login-password:hover,
+.login-email,.login-password:focus {
+    border-top: none; /* No border on hover or focus */
+    border-left: none;
+    border-right: none;
+    outline: none; /* Remove outline */
+}
+
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+.login-box span {
+    float: left;
+}
+
+.login-box a {
+    float: right;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all ease-in-out;
+}
+
+.login-box a:hover {
+    color: #9526a9;
+    font-weight: bold;
+}
+
+.login-button {
+    width: 20vw;
+    margin: 10px;
+    padding: 0px;
+ height: 5vh;
+    border: none;
+    background-color: #0171b6;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.login-button:hover {
+    transform: scale(1.1);
+}
+
+.login-box hr {
+    width: 20%;
+    display: inline-block;
+}
+
+.login-box p {
+    display: inline-block;
+    margin: 0px 10px 30px;
+}
+
+.login-box ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.login-box ul li {
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.login-box ul li:hover {
+    opacity: 0.6;
+}
+
+.login-box ul li:last-child {
+    margin-right: 0;
+}
+
+.login-box .copyright {
+    display: inline-block;
+    float: none;
+}
+
+/*Start Register Style*/
+.register-box {
+    float: right;
+    background-image: linear-gradient(135deg, #23212f 5%, #0171b6 95%);
+    height: 100vh;
+
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.register-box h2 {
+    margin: 30px 0;
+    font-size: 60px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.register-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 4vw;
+    color: white;
+}
+
+.register-button {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 8vw;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+}
+
+.register-button:hover {
+    color: #9526a9;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 767px) {
+    .login-container{
+        height: 100vh;
+    }
+    
+    .login-box{
+        flex-direction: column;
+        border-top-left-radius: 8px;
+        width: 91vw;
+        margin-right: -4.3rem;
+
+        height: auto;
+        
+       
+    }
+    .login-inner-container{
+       
+       
+    }
+    .register-box{
+        display: none;
+    }
+   
+   .login-password{
+    width: 80vw;
+   }
+   .login-email{
+    width: 80vw;
+   }
+   .login-button{
+    width: 80vw;
+    transition: 0.4s ease-in-out;
+   }
+  
+}

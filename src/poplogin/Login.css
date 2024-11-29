@@ -1,0 +1,139 @@
+/* Login.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(159, 155, 155, 0.5); /* Reduced opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s forwards;
+
+  /* Background blur */
+  backdrop-filter: blur(5px); /* Adjust blur intensity as needed */
+}
+
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-content {
+  background: white;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  height: 450px;
+  max-width: 90%;
+  margin-top: 4rem;
+  overflow: hidden;
+}
+
+.popup-image {
+  flex: 1;
+}
+
+.login-image {
+  width:26vw;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.login-form {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#google {
+  color: rgb(255, 255, 255);
+  margin: 5px;
+
+}
+
+.login-form button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 80%;
+}
+
+.login-form button:hover {
+  background: #f0f0f0;
+}
+
+.google-login {
+  display: flex;
+  align-items: center;
+  background: #0171b6;
+  color: white;
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.google-login:hover {
+  background: #c13528;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .popup-content {
+    flex-direction: column;
+    /* Stack image and form vertically */
+    width: 90vw;
+    /* Full width on small screens */
+    margin:0;
+    height: auto;                                                
+    
+  }
+
+  .login-image {
+    width: 98vw;
+    /* Full width for the image */
+  }
+
+  .login-image {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+  }
+
+  .login-form {
+    padding: 10px;
+  }
+
+  .login-form input {
+    width: 90%;
+    /* Wider input on smaller screens */
+  }
+
+  .login-form button {
+    width: 90%;
+    /* Wider button on smaller screens */
+  }
+}

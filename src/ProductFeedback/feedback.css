@@ -1,0 +1,147 @@
+/* feedback.css */
+
+/* Container styling */
+.feedback-container {
+  padding: 20px;
+  
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.feedback-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  grid-column: 1 / -1; /* Center heading across all columns */
+}
+
+.feedback-container form {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+  grid-column: 1 / -1; /* Form spans all columns */
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  grid-column: span 2; /* Full width */
+}
+
+.feedback-file-input {
+  padding: 5px;
+  grid-column: span 2; /* Full width */
+}
+
+.feedback-submit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  grid-column: span 2; /* Full width */
+}
+
+.feedback-submit-button:hover {
+  background-color: #0056b3;
+}
+
+.feedback-image-preview {
+  width: 20vw;
+  height: 20vh;
+  border-radius: 4px;
+  margin-top: 10px;
+  grid-column: span 2; /* Full width */
+}
+
+.feedback-list {
+  list-style-type: none;
+  padding: 0;
+
+ 
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.feedback-item {
+  display: flex;
+  width: 21vw;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.feedback-item p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.feedback-image {
+  width: 20vw;;
+  height: 30vh;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.feedback-delete-button {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedback-delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .feedback-container form {
+    grid-template-columns: 1fr; /* Single-column grid for medium screens */
+  }
+
+  .feedback-input,
+  .feedback-textarea {
+    font-size: 14px;
+    grid-column: span 1; /* Full width */
+  }
+
+  .feedback-submit-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-container form {
+    gap: 5px;
+  }
+
+  .feedback-input,
+  .feedback-textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .feedback-submit-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .feedback-image-preview {
+    max-width: 100%;
+  }
+}

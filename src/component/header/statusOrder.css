@@ -1,0 +1,247 @@
+/* statusOrder.css */
+
+
+
+
+
+
+
+/* Container for the tracking steps */
+.tracking-order-container {
+    padding: 15px;
+}
+
+.tracking-order-wrapper {
+    background-color: #F8F8F8;
+    margin: 20px 0;
+    border-radius: 8px;
+    padding: 35px;
+}
+
+.tracking-order-content {
+    padding-top: 45px;
+}
+
+/* Flex container to arrange steps in a row */
+.tracking-order-steps {
+    display: flex;
+    width: 60vw;
+
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Each step */
+.tracking-order-step {
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+/* Indicator dot styling */
+.tracking-order-step__indicator {
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: #f7be16; /* Default color */
+    margin: 0 auto;
+    transition: background 0.25s linear;
+    z-index: 2;
+}
+
+/* Tick sign for completed steps */
+.tracking-order-step__indicator::after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 14px;
+    width: 7px;
+    top: 6px; /* Adjusted for better positioning */
+    left: 9px; /* Adjusted for better positioning */
+    border: 2px solid #AFAFAF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+
+/* Text and date styling */
+.tracking-order-step__text {
+    color: #A4A4A4;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 20px;
+}
+
+.tracking-order-step__date {
+    font-size: 14px;
+}
+
+/* Status colors */
+.tracking-order-step--pending .tracking-order-step__indicator {
+    background-color: red;
+}
+
+.tracking-order-step--confirmed .tracking-order-step__indicator {
+    background-color: green;
+}
+
+.tracking-order-step--shipped .tracking-order-step__indicator {
+    background-color: orange;
+}
+
+.tracking-order-step--completed .tracking-order-step__indicator {
+    background-color: #27aa80;
+}
+
+.tracking-order-step--completed .tracking-order-step__indicator::after {
+    border-color: #fff;
+    border-width: 0 3px 3px 0;
+    width: 7px;
+    opacity: 1;
+}
+
+/* Connecting line */
+.tracking-order-step:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #f7be16; /* Default line color */
+    position: absolute;
+    top: 15px; /* Positioning to connect dots */
+    left: calc(50% - 1px); /* Centered line */
+    z-index: 1;
+    transition: background-color 0.25s linear;
+}
+
+/* Color of connecting lines based on status */
+.tracking-order-step--completed:not(:last-child)::after {
+    background-color: #27aa80;
+}
+
+.tracking-order-step--confirmed:not(:last-child)::after {
+    background-color: green;
+}
+
+.tracking-order-step--shipped:not(:last-child)::after {
+    background-color: orange;
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+    .tracking-order-step {
+        width: 33.33%; /* Three columns layout on small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .tracking-order-step {
+        width: 25%; /* Four columns layout on medium screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add smooth transitions for status changes */
+.tracking-order-step__indicator {
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+/* Scale animation for the status indicator when status changes */
+.tracking-order-step--pending .tracking-order-step__indicator,
+.tracking-order-step--confirmed .tracking-order-step__indicator,
+.tracking-order-step--shipped .tracking-order-step__indicator,
+.tracking-order-step--completed .tracking-order-step__indicator {
+    transform: scale(1.2);
+}
+
+/* Reset scale for completed status */
+.tracking-order-step--completed .tracking-order-step__indicator {
+    transform: scale(1);
+}
+
+/* Connecting line animation */
+.tracking-order-step::after {
+    transition: background-color 0.5s ease;
+}
+
+/* Add fade-in animation to new steps */
+.tracking-order-step {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+  
+  .wrapper-ids {
+    width: min(325px,80vw);
+    display: grid;
+    background-color: #F8F8F8;
+    align-items: center;
+    border-radius: 8px;
+  
+    & > * {
+      grid-column: 1;
+      grid-row: 1;
+      font: 1.1rem futura,helvetica,sans-serif;
+      color: var(--white);
+    }
+  
+    & input {
+      position: relative;
+      border: 1.5px solid var(--white);
+      border-radius: 0.25rem;
+      outline: none;
+      background-color: transparent;
+      color: var(--white);
+      padding: 1rem;
+      z-index: 0;
+      transition: border-color 0.5s;
+  
+      &:focus { border-color: var(--primary); }
+  
+      &:focus ~ span, 
+      &:not(:placeholder-shown) ~ span {
+        transform: translateY(-1.8rem) scale(0.75);
+        padding: 0 0.25rem;
+        color: var(--white);
+      }
+    }
+  
+    & span {
+      width: max-content;
+      background-color: var(--bg);
+      margin-left: 1rem;
+      color: black;
+      transition: transform 0.5s;
+    }
+  }

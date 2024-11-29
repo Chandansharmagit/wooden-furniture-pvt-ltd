@@ -1,0 +1,98 @@
+.sofa-img {
+    width: 96.3vw;
+    height: 70vh;
+    margin: 20px;
+}
+.living{
+    margin: 20px;
+}
+
+.carts-pregination-sofas {
+   
+   
+   border-radius: 8px;
+}
+
+.newproducts-items {
+    display: flex;
+    margin: 20px;
+   
+
+}
+.products-item-pregs{
+    margin: 10px;
+}
+.fistdivs,
+.firstimgs {
+    width: 42vw;
+    height: 65.5vh;
+    
+}
+
+.sndimg {
+   
+    height: 30vh;
+    width: 24.8vw;
+}
+
+.tndimg {
+   
+    width: 24.8vw;
+    
+}
+
+
+
+
+
+
+.more-products {
+    display: flex;
+    margin: 10px;
+
+}
+
+.more-items {
+    margin: 12px;
+}
+
+.new-launched-sofas {
+    width: 22.8vw;
+
+   height: auto;
+
+}
+
+@media(max-width:767px) {
+    .newproducts-items {
+        flex-direction: column;
+    }
+
+    .fistdivs,
+    .firstimgs {
+        width: 90vw;
+        height: 65.5vh;
+    }
+
+    .sndimg {
+        margin-left: 0rem;
+        height: 30vh;
+        width: 90vw;
+        margin-top: 1rem;
+    }
+
+    .tndimg {
+        margin-left: 0rem;
+        margin-top: 2rem;
+        width: 90vw;
+    }
+
+    .sofa-img {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    .carts-pregination-sofas {
+        margin: 20px;
+    }
+}

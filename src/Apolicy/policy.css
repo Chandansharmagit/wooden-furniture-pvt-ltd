@@ -1,0 +1,71 @@
+/* General Styles */
+.list-style, .ul-style {
+    margin: 15px;
+    list-style: decimal;
+}
+.carts-pregination-policy {
+    margin: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.carts-items-policy {
+    margin: 20px;
+    padding: 20px;
+}
+.highlight {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Selection Styling */
+::selection {
+    background: green;
+    color: rgb(255, 255, 255);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .list-style, .ul-style {
+        margin: 10px;
+        font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+
+    .carts-pregination-policy {
+        margin: 5px;
+        padding: 10px;
+        border-radius: 5px; /* Reduce border radius on smaller screens */
+    }
+
+    .carts-items-policy {
+        margin: 10px;
+        padding: 15px; /* Adjust padding to maintain spacing */
+    }
+
+    .highlight {
+        font-size: 12px; /* Adjust highlight text size */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .list-style, .ul-style {
+        margin: 5px;
+        font-size: 12px; /* Further adjust for smaller screens */
+    }
+
+    .carts-pregination-policy {
+        margin: 3px;
+        padding: 8px;
+        border-radius: 3px;
+    }
+
+    .carts-items-policy {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .highlight {
+        font-size: 10px;
+    }
+}

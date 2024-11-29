@@ -1,0 +1,70 @@
+.Order-page-container {
+    padding: 20px;
+    width: 96vw;
+    margin: 20px;
+    border-radius: 8px;
+  
+    background: #e3e1e1;
+
+}
+
+.Order-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.Order-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.Order-alert {
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .feedback-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .feedback-item {
+        padding: 15px;
+    }
+
+    .delete-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-item {
+        padding: 10px;
+    }
+
+    .delete-btn {
+        padding: 6px;
+        font-size: 12px;
+    }
+}

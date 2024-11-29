@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+/* General Styles */
+.hanging-main-wrapper {
+  font-size: 10vmin; /* Base font size for larger screens */
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23vw;
+  height: auto;
+  position: fixed; /* Signboard stays fixed */
+  top: 4.5vw; /* Adjust for navbar height */
+  left: 70vw;
+  right: 0;
+  z-index: 1;
+}
+
+.hanging-signboard-wrapper {
+  width: 70vmin; /* Base width */
+  height: 35vmin; /* Base height */
+  position: relative;
+  flex-shrink: 0;
+  transform-origin: center 2.5vmin;
+  animation: 1000ms init forwards, 1000ms init-sign-move ease-out 1000ms, 3000ms sign-move 2000ms infinite;
+}
+
+.hanging-signboard-wrapper .hanging-signboard {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold text */
+  font-size: 15px; /* Base text size */
+  background: linear-gradient(145deg, #ecebea, #0171b6); /* Gradient background */
+  width: 65vmin;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5vw;
+  border-radius: 4vmin;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  letter-spacing: 0.2vmin; /* Letter spacing */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Shadow for floating effect */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+.hanging-signboard-wrapper .hanging-signboard:hover {
+  background: linear-gradient(145deg, #ff3b0d, #ff7e47); /* Hover gradient */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
+  transition: transform 0.3s ease, background 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hanging-signboard-wrapper .hanging-string {
+  width: 20vmin; /* Base width */
+  height: 20vmin; /* Base height */
+  border: 2px solid blue;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  transform-origin: top left;
+  transform: rotatez(45deg);
+}
+
+.hanging-signboard-wrapper .hanging-pin {
+  width: 4vmin; /* Base pin size */
+  height: 4vmin;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hanging-signboard-wrapper .hanging-pin.hanging-pin1 {
+  background-color: #9f9f9f;
+  top: 0;
+  left: calc(50% - 2vmin);
+}
+
+.hanging-signboard-wrapper .hanging-pin.hanging-pin2,
+.hanging-signboard-wrapper .hanging-pin.hanging-pin3 {
+  background-color: #d83000;
+  top: 18vmin;
+}
+
+.hanging-signboard-wrapper .hanging-pin.hanging-pin2 {
+  left: 9vmin;
+}
+
+.hanging-signboard-wrapper .hanging-pin.hanging-pin3 {
+  right: 9vmin;
+}
+
+/* Keyframes */
+@keyframes init {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes init-sign-move {
+  100% {
+    transform: rotatez(3deg);
+  }
+}
+
+@keyframes sign-move {
+  0% {
+    transform: rotatez(3deg);
+  }
+  50% {
+    transform: rotatez(-3deg);
+  }
+  100% {
+    transform: rotatez(3deg);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1300px) {
+  .hanging-main-wrapper {
+    font-size: 8vmin; /* Smaller font size */
+    width: 25vw; /* Adjusted width */
+    left: 60vw; /* Adjusted position */
+  }
+
+  .hanging-signboard-wrapper {
+    width: 60vmin; /* Reduced width */
+    height: 30vmin; /* Reduced height */
+  }
+
+  .hanging-signboard-wrapper .hanging-signboard {
+    font-size: 12px; /* Smaller text size */
+  }
+
+  .hanging-signboard-wrapper .hanging-string {
+    width: 18vmin; /* Reduced width */
+    height: 18vmin; /* Reduced height */
+  }
+
+  .hanging-signboard-wrapper .hanging-pin {
+    width: 3vmin; /* Smaller pin size */
+    height: 3vmin;
+  }
+}
+
+@media (max-width: 900px) {
+  .hanging-main-wrapper {
+    font-size: 6vmin; /* Further reduced font size */
+    width: 30vw; /* Adjusted width */
+    left: 50vw; /* Adjusted position */
+  }
+
+  .hanging-signboard-wrapper {
+    width: 50vmin; /* Further reduced width */
+    height: 25vmin; /* Further reduced height */
+  }
+
+  .hanging-signboard-wrapper .hanging-signboard {
+    font-size: 10px; /* Further reduced text size */
+  }
+
+  .hanging-signboard-wrapper .hanging-string {
+    width: 16vmin; /* Further reduced width */
+    height: 16vmin; /* Further reduced height */
+  }
+
+  .hanging-signboard-wrapper .hanging-pin {
+    width: 2.5vmin; /* Further smaller pin size */
+    height: 2.5vmin;
+  }
+}
+
+@media (max-width: 600px) {
+  .hanging-main-wrapper {
+    font-size: 5vmin; /* Smallest font size */
+    width: 35vw; /* Adjusted width */
+    left: 40vw; /* Adjusted position */
+  }
+
+  .hanging-signboard-wrapper {
+    width: 40vmin; /* Minimum width */
+    height: 20vmin; /* Minimum height */
+  }
+
+  .hanging-signboard-wrapper .hanging-signboard {
+    font-size: 8px; /* Smallest text size */
+  }
+
+  .hanging-signboard-wrapper .hanging-string {
+    width: 14vmin; /* Minimum width */
+    height: 14vmin; /* Minimum height */
+  }
+
+  .hanging-signboard-wrapper .hanging-pin {
+    width: 2vmin; /* Smallest pin size */
+    height: 2vmin;
+  }
+}

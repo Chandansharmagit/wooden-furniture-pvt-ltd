@@ -1,0 +1,156 @@
+/* Profile.css */
+
+.chandan-profile-preg {
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    width: 97vw;
+    display: flex;
+    flex-direction: row; /* Set the default to row */
+    transition: 0.4s ease-in-out;
+    animation: fadeInSlideUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#p-chandan {
+    width: 4vw;
+    border-radius: 50%;
+    height: 9vh;
+}
+
+.chandan-profile-preg-items {
+    width: 40vw;
+    height: auto;
+    margin: 20px;
+    border-radius: 8px;
+    flex: 1; /* Allow flexible resizing */
+}
+
+.det {
+    margin: 10px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.log-out {
+    background: blue;
+    border-radius: 8px;
+    padding: 5px;
+    border: none;
+    width: 7vw;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0; /* Consistent margin */
+}
+
+h3 {
+    cursor: pointer;
+}
+
+.another-main-div {
+    background: #e7e5e5;
+    width: 93vw;
+    height: auto;
+}
+
+.products-order {
+    margin: 5px;
+}
+
+/* Responsive styles */
+
+/* Mobile devices (up to 576px) */
+@media (max-width: 576px) {
+    .chandan-profile-preg {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+
+    #p-chandan {
+        width: 20vw; /* Increase width for better visibility on small screens */
+        height: auto;
+    }
+
+    .chandan-profile-preg-items {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .log-out {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .another-main-div {
+        width: 100%;
+    }
+}
+
+/* Tablets (min-width: 577px and max-width: 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .chandan-profile-preg {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #p-chandan {
+        width: 15vw;
+        height: auto;
+    }
+
+    .chandan-profile-preg-items {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .log-out {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .another-main-div {
+        width: 100%;
+    }
+}
+
+/* Desktops (min-width: 769px) */
+@media (min-width: 769px) {
+    .chandan-profile-preg {
+        flex-direction: row;
+        width: 97vw;
+    }
+
+    #p-chandan {
+        width: 4vw;
+        height: 9vh;
+    }
+
+    .chandan-profile-preg-items {
+        width: 40vw;
+        height: 82vh;
+    }
+
+    .log-out {
+        width: 7vw;
+    }
+
+    .another-main-div {
+        width: 93vw;
+    }
+}

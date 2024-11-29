@@ -1,0 +1,246 @@
+.chk-container {
+  width: 94vw;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 16px;
+
+  height: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s forwards;
+}
+.chk-main-container{
+  background-color: #eef3f9;
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chk-header-text {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.chk-cart-form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chk-cart-items {
+  flex: 2;
+  background: rgb(255, 255, 255);
+  color: #000;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chk-item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chk-cart-item {
+  display: flex;
+  flex-direction: row; /* Flex direction changed for better responsive handling */
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.chk-item-image img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.chk-item-details {
+  flex: 1;
+  margin-left: 16px;
+}
+
+.chk-item-name {
+  width: 30vw;
+  color: #000;
+}
+
+.chk-item-color,
+.chk-item-size {
+  color: #666;
+}
+
+.chk-item-price {
+  display: flex;
+  color: #000;
+  align-items: center;
+}
+
+.chk-item-old-price {
+  text-decoration: line-through;
+  margin-right: 8px;
+  color: #999;
+}
+
+.chk-item-new-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.chk-item-discount {
+  color: green;
+  margin-left: 8px;
+}
+
+.chk-item-quantity {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.chk-item-quantity button {
+  width: 30px;
+  height: 30px;
+}
+
+.chk-item-quantity input {
+  width: 40px;
+  text-align: center;
+  margin: 0 4px;
+}
+
+.chk-btn-remove {
+  margin-left: 16px;
+}
+
+.chk-price-summary {
+  flex: 1;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  position: sticky;
+  top: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chk-summary-heading {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chk-summary-details {
+  margin-bottom: 16px;
+}
+
+.chk-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.chk-summary-total {
+  border-top: 1px dashed #ccc;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.chk-savings {
+  color: green;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.chk-btn-items {
+  margin-top: 16px;
+}
+
+.chk-btn-cart {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .chk-cart-form {
+    flex-direction: column;
+  }
+
+  .chk-cart-items, .chk-price-summary {
+    width: 100%;
+    margin-bottom: 20px; /* Adds spacing between stacked elements */
+  }
+}
+
+@media (max-width: 768px) {
+  .chk-cart-form {
+    flex-direction: column;
+    gap: 16px; /* Reduces gap for smaller screens */
+  }
+  .chk-cart-items{
+    width: 100%;
+    margin: 0px;
+  }
+
+  .chk-container {
+  margin: 0px;
+    
+
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s forwards;
+  }
+
+  .chk-cart-item {
+    flex-direction: column; /* Stacks items vertically on smaller screens */
+    align-items: flex-start; /* Aligns items to the start for better spacing */
+  
+  }
+
+  .chk-item-image img {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 200px; /* Restrict max width */
+    margin-bottom: 16px; /* Adds spacing below the image */
+  }
+
+  .chk-item-details {
+    width: 100%; /* Full width for details */
+    margin-left: 0; /* Removes left margin on smaller screens */
+  }
+
+  .chk-item-name,
+  .chk-item-price,
+  .chk-item-quantity,
+  .chk-btn-remove {
+    width: 100%; /* Full width for each element */
+    text-align: left; /* Aligns text to the left */
+    margin-bottom: 8px; /* Adds spacing between elements */
+  }
+
+  .chk-price-summary {
+    width: 100%; /* Full width for price summary */
+    margin-top: 20px; /* Adds spacing above price summary */
+  }
+
+  .chk-container {
+    width: 100%; /* Full width for container */
+    padding: 8px; /* Reduces padding on smaller screens */
+  }
+
+  .chk-item-name {
+    width: 100%; /* Full width for item name */
+  }
+}

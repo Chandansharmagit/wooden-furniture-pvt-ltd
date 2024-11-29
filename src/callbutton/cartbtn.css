@@ -1,0 +1,37 @@
+/* CallButton.css */
+.call-button-cart {
+    position: fixed;
+    right: 100px;
+    bottom: 20px;
+    background-color: #0171b6; /* Green color */
+    color: white;
+    border-radius: 50%;
+  
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .call-icon-cart{
+    margin-left: 0.5vw;
+  }
+  .cartcount,.cc{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 1.5vw;
+    margin-top: -2vw;
+    color: white;
+  }
+
+  #phones{
+    color: rgb(255, 255, 255);
+  }
+  
+  .call-button-cart:hover {
+    background-color: #e6ece8; /* Darker green */
+  }
+  
